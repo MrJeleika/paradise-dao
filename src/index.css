@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Pixelify+Sans:regular,500,600,700);
+/* @font-face {
+  font-family: 'Rubik One Regular';
+  src: url('/fonts/RubikOne-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: #28ccaf;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0);
+  border-radius: 10px;
+}
+
+@layer base {
+  * {
+    @apply antialiased;
+    font-family: 'Pixelify Sans', sans-serif;
+  }
+
+  body {
+    @apply bg-background text-primary transition-colors;
+  }
+}
+
+.wallet-adapter-dropdown > .wallet-adapter-button {
+  font-family: 'Pixelify Sans', sans-serif !important;
+  border: 3px solid #481a70 !important;
+  border-bottom-width: 3px !important;
+  border-right-width: 3px !important;
+  border-top-width: 0px !important;
+  border-left-width: 0px !important;
+  @apply !bg-purple !rounded-none !border-b-[3px] !border-r-[3px] !border-[#481a70] !text-[18px] !text-white !shadow-[-3px_0_0_0_#121212,3px_0_0_0_#121212,0_-3px_0_0_#121212,0_3px_0_0_#121212] transition-all duration-100 hover:!opacity-90 active:!border-b-0 active:!border-l-[3px] active:!border-r-0 active:!border-t-[3px] dark:!shadow-[-3px_0_0_0_#393E46,3px_0_0_0_#393E46,0_-3px_0_0_#393E46,0_3px_0_0_#393E46];
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+@keyframes rays-light {
+  0% {
+    box-shadow:
+      0 0 0 0 #f9cd1a80,
+      0 0 0 4px #f9cd1a80,
+      0 0 0 8px #f9cd1a40,
+      0 0 0 12px #f9cd1a20,
+      0 0 0 16px #f9cd1a10,
+      0 0 8px 20px #f9cd1a10;
+  }
+  100% {
+    box-shadow:
+      0 0 0 4px #f9cd1a80,
+      0 0 0 8px #f9cd1a40,
+      0 0 0 12px #f9cd1a20,
+      0 0 0 16px #f9cd1a10,
+      0 0 0 20px #f9cd1a00,
+      0 0 8px 20px #f9cd1a10;
+  }
+}
+
+@keyframes rays-dark {
+  0% {
+    box-shadow:
+      0 0 0 0 #e6e6e680,
+      0 0 0 4px #e6e6e680,
+      0 0 0 8px #e6e6e640,
+      0 0 0 12px #e6e6e620,
+      0 0 0 16px #e6e6e610,
+      0 0 8px 20px #e6e6e610;
+  }
+  100% {
+    box-shadow:
+      0 0 0 4px #e6e6e680,
+      0 0 0 8px #e6e6e640,
+      0 0 0 12px #e6e6e620,
+      0 0 0 16px #e6e6e610,
+      0 0 0 20px #e6e6e600,
+      0 0 8px 20px #e6e6e610;
+  }
+}
