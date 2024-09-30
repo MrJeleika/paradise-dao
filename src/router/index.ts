@@ -12,6 +12,7 @@ function lazyWithRetry(dynamicImportFn: () => any) {
 
 export const routes = {
   root: '/',
+  createSpl: '/create-spl',
 } as const;
 
 export const router = createBrowserRouter([

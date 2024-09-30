@@ -54,7 +54,7 @@ export default function Home() {
   }, [address, amountOfSol, publicKey, sendTransaction]);
 
   return (
-    <div className="flex h-screen flex-col items-center justify-center gap-5 text-4xl">
+    <div className="flex flex-1 flex-col items-center justify-center gap-5 text-4xl">
       <div className="flex items-center gap-5">
         {publicKey && (
           <p className="font-medium">{shortenAddress(publicKey.toString())}</p>
