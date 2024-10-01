@@ -72,6 +72,7 @@ export default function Home() {
           value={amountOfSol}
           onChange={(e) => setAmountOfSol(e.target.value)}
           placeholder="Amount of SOL"
+          variant="transparent"
         />
         <Button
           disabled={!publicKey}
