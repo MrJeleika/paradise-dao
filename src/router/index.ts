@@ -25,6 +25,10 @@ export const router = createBrowserRouter([
         Component: lazyWithRetry(() => import('@/pages/home')),
       },
       {
+        path: routes.createSpl,
+        Component: lazyWithRetry(() => import('@/pages/spl-token')),
+      },
+      {
         path: '*',
         Component: lazyWithRetry(() => import('@/pages/home')),
       },

@@ -13,7 +13,9 @@ const DefaultLayout = memo(() => {
       <div className="relative flex min-h-screen flex-col">
         <Header />
         <Suspense fallback={<PageLoader screen />}>
-          <Outlet />
+          <div className="flex flex-1 flex-col">
+            <Outlet />
+          </div>
         </Suspense>
         <Footer />
       </div>
